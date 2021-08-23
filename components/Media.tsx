@@ -28,7 +28,7 @@ function Media({ exp }: { exp: Experience }) {
       <small className="block text-gray-600 italic">{exp.blurb}</small>
       <div className="my-5">
         {exp.img && (
-          <div className="flex justify-center">
+          <div className="flex justify-center shadow-lg">
             <Image className="rounded" src={exp.img} layout="intrinsic" />
           </div>
         )}
@@ -44,7 +44,7 @@ function Media({ exp }: { exp: Experience }) {
           >
             <span className="pr-2.5">Project Link</span>
             <Image
-              className={"px-2s"}
+              className={"px-2"}
               src={OpenIcon}
               layout="fixed"
               width="20"
