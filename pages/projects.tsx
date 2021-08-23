@@ -12,7 +12,11 @@ function Projects() {
           <Header header={"My Projects 🔩"} textColor="text-dark" />
           {projects &&
             projects.map((exp) => {
-              return <Media exp={exp} />;
+              return (
+                <div id={exp.title}>
+                  <Media exp={exp} />
+                </div>
+              );
             })}
           <BottomSpacer />
         </>

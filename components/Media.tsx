@@ -6,7 +6,7 @@ import Image from "next/image";
 //bascically title header(name, date,), image and fading description (read more redirect).
 
 function Media({ exp }: { exp: Experience }) {
-  const handleProjectLink = (link: string | null) => {
+  const handleProjectLink = (link: string | null | undefined) => {
     if (link) {
       window.open(
         link,

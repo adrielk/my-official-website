@@ -49,11 +49,13 @@ function Preview({
             </div>
             <div className="text-base font-normal ">
               {exp.detailed?.split(" ").slice(0, 50).join(" ")} ...{"  "}
-              <ViewMore
-                onClick={() => {
-                  router.push(redirectLink);
-                }}
-              />
+              <a href={`#${exp.title}`}>
+                <ViewMore
+                  onClick={() => {
+                    router.push(redirectLink);
+                  }}
+                />
+              </a>
             </div>
           </div>
         );
