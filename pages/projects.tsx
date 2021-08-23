@@ -12,16 +12,7 @@ function Projects() {
           <Header header={"My Projects 🔩"} textColor="text-dark" />
           {projects &&
             projects.map((exp) => {
-              return (
-                <Media
-                  title={exp.title}
-                  role={exp.role}
-                  blurb={exp.blurb}
-                  img={exp.img}
-                  caption={exp.detailed}
-                  techList={exp.technologies}
-                />
-              );
+              return <Media exp={exp} />;
             })}
           <BottomSpacer />
         </>

@@ -15,7 +15,11 @@ export const projects = [
     role: null,
     blurb: "An app for browsing books from the Google Books API",
     img: require("../images/library-app.png"),
-    detailed: "",
+    detailed:
+      "The Google Books API is an amazing resource for finding books of all kinds. However, the Google Books search service\
+    is not very appealing by today's standards. I wanted to make my own version of the service with a more mondern and functional\
+    user-interface. With my web app, one can see browse many more books at once, save books to their library, and click on books to\
+    get details on them.",
     technologies: [
       "React",
       "JavaScript",
@@ -26,62 +30,70 @@ export const projects = [
     link: "https://github.com/adrielk/react-library",
   },
   {
-    title: "Restaurant Finder",
+    title: "School Dashboard",
     role: null,
     blurb:
-      "A start-up developing motion-capture hardware and software for gaining insights on athlete performance.",
-    img: require("../images/brave-work.png"),
+      "React CRUD application for managing teachers, students, classes, and events",
+    img: require("../images/school-dash.png"),
     detailed:
-      "I developed a motion data visualization dashboard and a message/chat system for \
-      Brave Virtual World's web platform. This platform will be used to allow coaches and physical therapists \
-      analyze athlete performance and determine ways it can be improved. In addition, this platform enables communication\
-      with a coach and all his/her athletes. A major challenge with this project was developing the data visualization dashboard in such\
-      a way that would provide full flexibility for the user. This required forethought when engineering the components involved in\
-      this feature.",
-    technologies: ["React", "AWS Amplify", "Firebase", "Material-UI"],
-    link: null,
+      "As part of a team of 4, I lead and developed a mock full-stack school dashboard application that can be used by administrators to manage\
+      every aspect of a high school. I've also implemented basic authentication for this website, which only allows logged-in users to view\
+      and modify the website's contents. This project was a great exercise in full-stack development in a team setting.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Firebase",
+      "Express.js",
+      "Material-UI",
+    ],
+    link: "https://github.com/LaunchSWETeam2/JeffersonElementary",
   },
 
   {
     title: "PhysioDash",
     role: null,
-    blurb:
-      "Work under Professor Kevin Skadron and the Fermilab group involved in astronomy and computing",
-    img: require("../images/research.png"),
-    detailed: "An opportunity to use TypeScript. Honestly my new favorite..",
-    technologies: ["C++", "CUDA", "cProfile", "KCachegrind", "Python"],
-    link: null,
-  },
-  {
-    title: "CapTech Data Challenge",
-    role: null,
-    blurb:
-      "Work under Professor Kevin Skadron and the Fermilab group involved in astronomy and computing",
-    img: require("../images/research.png"),
+    blurb: "Computer-vison exercise summarizer web application",
+    img: require("../images/physiodash.png"),
     detailed:
-      "Using performance profiling tools such as cProfile and KCachegrind, \
-      I identified areas of the code base in need of GPU optimization. I identified an image processing step,\
-      called brighter-fatter correction, which would significantly benefit from GPU optimization. Using CUDA C++, NVIDIA libraries \
-      and parallel programming techniques, I implemented the function and achieved a speed up of nearly 11X. Major challenges\
-      with this project were adapting to the parallel programming paradigm and debugging this type of code. Many of my challenges\
-      were solved by taking advantage of NVIDIA library functions, frequent communication with professors, and use of many external resources.",
-    technologies: ["C++", "CUDA", "cProfile", "KCachegrind", "Python"],
-    link: null,
+      "As part of a team of 4, I contributed to the development of a health/fitness web application which can be used to\
+       keep track of home workout progress through a webcam. This app used the open source Mediapipe pose classifier which we trained on\
+       video data of various exercises we found on Kaggle. My role was developing the React web application and connecting to our Django backend which\
+       contained the pose classification model. Currently, our web application can count the number of wall push ups, \
+       lunges, and squats you do. In the future, we hope to train this model on more exercises and speed up the classification process.",
+    technologies: [
+      "React",
+      "Django",
+      "JavaScript",
+      "Python",
+      "Mediapipe Pose Classifier",
+    ],
+    link: "https://www.youtube.com/watch?v=sJjPFmnNey0&ab_channel=A",
   },
   {
     title: "COVID-19 Data Analysis",
     role: null,
     blurb:
-      "Work under Professor Kevin Skadron and the Fermilab group involved in astronomy and computing",
-    img: require("../images/research.png"),
+      "Data analysis project using John's Hopkins COVID-19 time series and Twitter data",
+    img: require("../images/covid-analysis.png"),
     detailed:
-      "Using performance profiling tools such as cProfile and KCachegrind, \
-      I identified areas of the code base in need of GPU optimization. I identified an image processing step,\
-      called brighter-fatter correction, which would significantly benefit from GPU optimization. Using CUDA C++, NVIDIA libraries \
-      and parallel programming techniques, I implemented the function and achieved a speed up of nearly 11X. Major challenges\
-      with this project were adapting to the parallel programming paradigm and debugging this type of code. Many of my challenges\
-      were solved by taking advantage of NVIDIA library functions, frequent communication with professors, and use of many external resources.",
-    technologies: ["C++", "CUDA", "cProfile", "KCachegrind", "Python"],
-    link: null,
+      "Using COVID-19 time-series, I developed visualizations that answered questions such as 'Which days are you most at risk of getting COVID?', and I\
+      created a function plotted time-series data given a specific U.S. state. Using COVID-19 related Twitter data, I filtered out data mentioning President Trump\
+      to analyze how sentiment toward Trump changed over time. This project was a great exercise in data cleaning using Pandas and Numpy, and data visuaization\
+      with seaborn and matplotlib.",
+    technologies: ["Python", "seaborn", "matplotlib", "pandas", "numPy"],
+    link: "https://github.com/adrielk/Covid19-ML-and-Analysis",
+  },
+  {
+    title: "CapTech Data Challenge",
+    role: null,
+    blurb: "Data visualization project",
+    img: require("../images/captech.png"),
+    detailed:
+      "As part of a team of 4, I lead a data analysis project to determine\
+    which was the best state for us to live and work after graduation. I used Python to do our initial exploration on \
+    demographic data across the country in addition to California data from California Open Data. We then used Tableau to\
+    display our insights.",
+    technologies: ["Tableau", "Python"],
+    link: "https://public.tableau.com/app/profile/adriel4607/viz/CapTech-Data-Challenge-Dashboard/CapTech_Final_Dashboard",
   },
 ];

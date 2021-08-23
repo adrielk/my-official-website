@@ -39,7 +39,13 @@ function Preview({
             } py-2.5`}
           >
             <div className="py-2 font-medium">
-              {exp.title} - <span className="italic">{exp.role}</span>
+              {exp.title}
+              {exp.role && (
+                <>
+                  {" "}
+                  - <span className="italic">{exp.role}</span>
+                </>
+              )}
             </div>
             <div className="text-base font-normal ">
               {exp.detailed?.split(" ").slice(0, 50).join(" ")} ...{"  "}

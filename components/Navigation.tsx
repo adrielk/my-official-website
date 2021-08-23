@@ -58,7 +58,7 @@ function Navigation() {
       <TopBar socials={Socials()}>
         <>
           <div className="text-5xl font-medium">Adriel Kim</div>
-          <Link href="/home">
+          <Link href="/">
             <button className="font-medium text-xl">Home Page</button>
           </Link>
           <Link href="/work">

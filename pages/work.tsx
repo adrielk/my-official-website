@@ -12,16 +12,7 @@ function Work() {
           <Header header={"My Work Experience 💼"} textColor="text-dark" />
           {workExperiences &&
             workExperiences.map((exp) => {
-              return (
-                <Media
-                  title={exp.title}
-                  role={exp.role}
-                  blurb={exp.blurb}
-                  img={exp.img}
-                  caption={exp.detailed}
-                  techList={exp.technologies}
-                />
-              );
+              return <Media exp={exp} />;
             })}
           <BottomSpacer />
         </>
