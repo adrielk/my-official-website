@@ -12,21 +12,39 @@ function Media({
   img,
   imgDims,
   caption,
+  techList,
 }: {
-  title: string;
-  role: string;
-  blurb: string;
-  img: StaticImageData;
-  imgDims: imgDims;
-  caption: string;
+  title: string | null;
+  role: string | null;
+  blurb: string | null;
+  img?: typeof import("*.jpg") | typeof import("*.png");
+  imgDims?: imgDims | null;
+  caption: string | null;
+  techList: string[] | null;
 }) {
   return (
-    <div className="my-5">
-      <div className="text-lg">
-        {title} - <span className="italic">{role}</span>
-        <small className="block text-gray-600 italic">{blurb}</small>
-        <Image src={img} width={imgDims.width} height={imgDims.height} />
-        <div>{caption}</div>
+    <div className="my-5 border-b">
+      <div className="text-xl font-medium">
+        {title}
+        {role && (
+          <>
+            {" "}
+            - <span className="italic">{role} </span>
+          </>
+        )}
+      </div>
+      <small className="block text-gray-600 italic">{blurb}</small>
+      <div className="my-5">
+        {img && (
+          <div className="flex justify-center">
+            <Image className="rounded" src={img} layout="intrinsic" />
+          </div>
+        )}
+        <div className="text-base pt-2.5">{caption}</div>
+        <span className="font-medium block italic pt-2">
+          Technologies Used:{" "}
+          <span className="font-normal">{techList?.join(", ")}</span>
+        </span>
       </div>
     </div>
   );

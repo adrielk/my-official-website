@@ -1,5 +1,5 @@
 import React from "react";
-
+import BottomSpacer from "./BottomSpacer";
 function WideContentFrame({
   children,
   bgColor,

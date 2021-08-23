@@ -5,26 +5,50 @@ import Image from "next/image";
 import WideContentFrame from "./WideContentFrame";
 import GitHubIcon from "../images/github.png";
 import LinkedInIcon from "../images/linkedin.png";
-function LinkedInSocial() {
+
+import SocialLinks from "../page_data/social_links.json";
+function LinkedInSocial({
+  onClick,
+}: {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+}) {
   return (
-    <button>
+    <button onClick={onClick}>
       <Image className="rounded" src={LinkedInIcon} height="30" width="30" />
     </button>
   );
 }
-function GithubSocial() {
+function GithubSocial({
+  onClick,
+}: {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+}) {
   return (
-    <button>
+    <button onClick={onClick}>
       <Image className="rounded" src={GitHubIcon} height="30" width="30" />
     </button>
   );
 }
 
 function Socials() {
+  const openWindow = (link: string) => {
+    window.open(
+      link,
+      "_blank" // <- This is what makes it open in a new window.
+    );
+  };
   return (
     <div className="flex gap-2">
-      <LinkedInSocial />
-      <GithubSocial />
+      <LinkedInSocial
+        onClick={() => {
+          openWindow(SocialLinks.linkedin);
+        }}
+      />
+      <GithubSocial
+        onClick={() => {
+          openWindow(SocialLinks.github);
+        }}
+      />
     </div>
   );
 }
