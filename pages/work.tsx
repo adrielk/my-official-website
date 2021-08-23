@@ -13,7 +13,7 @@ function Work() {
           {workExperiences &&
             workExperiences.map((exp) => {
               return (
-                <div id={exp.title}>
+                <div id={exp.title} key={exp.title}>
                   <Media exp={exp} />
                 </div>
               );

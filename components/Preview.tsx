@@ -34,6 +34,7 @@ function Preview({
       {experiences.map((exp, i) => {
         return (
           <div
+            key={exp.title}
             className={`border-b border-t rounded px-2 shadow-lg ${
               i % 2 == 0 ? "bg-gray-200" : "bg-light"
             } py-2.5`}
