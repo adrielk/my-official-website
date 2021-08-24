@@ -8,6 +8,12 @@ import WideContentFrame from "../components/WideContentFrame";
 import Header from "../components/Header";
 import Preview from "../components/Preview";
 
+/*
+TO DO: Make fully responsive and mobile friendly
+- Add sliding animation between pages
+- Custom domain name?
+- SEO
+*/
 function SubHeader({ text }: { text: string }) {
   return (
     <strong className="block pb-2 pt-6 font-medium text-xl">{text}</strong>

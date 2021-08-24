@@ -7,8 +7,8 @@ export const workExperiences = [
     detailed:
       "At Curiosity Stream, I worked as a team lead and developer for an advanced tagging system \
         to solve the problem of low-quality tagging and poor discoverability of media. My task was to\
-        develop an internal web application that would provider greater assistance the tagger. This was accomplished with features\
-        such as a managemenet system for tags, tag suggestions, tag search and pagination, and a tagging effectiveness bar to assess quality of tags.\
+        develop an internal web application that would provider greater assistance for the tagger. This was accomplished with features\
+        such as a management system for tags, tag suggestions, tag search and pagination, and a tagging effectiveness bar to assess quality of tags.\
         A huge challenge with this project was requirements gathering as well as building reusable and scalable\
         software. Throughout the requirements gathering process, I learned how to compromise and communicate complex\
         ideas more effectively. When developing the web app, I learned how to modularize code into reusable and effective chunks.",
@@ -45,7 +45,7 @@ export const workExperiences = [
     with this project were adapting to the parallel programming paradigm and debugging this type of code. Many of my challenges\
     were solved by taking advantage of NVIDIA library functions, frequent communication with professors, and use of many external resources.",
     technologies: ["C++", "CUDA", "cProfile", "KCachegrind", "Python"],
-    link: "https://github.com/adrielk/LSST-Brighter-Fatter-GPU-Optimization",
+    link: "https://drive.google.com/file/d/1NaR2gQv4NEDcHnRXpn13ySvnyY3BCY1Q/view?usp=sharing",
   },
 ];
 /*

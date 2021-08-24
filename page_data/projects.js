@@ -77,8 +77,8 @@ export const projects = [
     img: require("../images/covid-analysis.png"),
     detailed:
       "Using COVID-19 time-series, I developed visualizations that answered questions such as 'Which days are you most at risk of getting COVID?', and I\
-      created a function plotted time-series data given a specific U.S. state. Using COVID-19 related Twitter data, I filtered out data mentioning President Trump\
-      to analyze how sentiment toward Trump changed over time. This project was a great exercise in data cleaning using Pandas and Numpy, and data visuaization\
+      created a function that plotted time-series data given a specific U.S. state. Using COVID-19 related Twitter data, I filtered out data mentioning President Trump\
+      to analyze how sentiment toward Trump changed over time. This project was a great exercise in data cleaning using Pandas and Numpy, and data visualization\
       with seaborn and matplotlib.",
     technologies: ["Python", "seaborn", "matplotlib", "pandas", "numPy"],
     link: "https://github.com/adrielk/Covid19-ML-and-Analysis",
