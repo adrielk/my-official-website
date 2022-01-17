@@ -2,8 +2,8 @@ import React from "react";
 import ProfileImage from "../components/ProfileImage";
 import ProfilePic from "../images/imcool.jpg";
 import HomeStaticData from "../page_data/home.json";
-import { workExperiences } from "../page_data/work";
-import { projects } from "../page_data/projects";
+import WorksData from "../page_data/work.json";
+import ProjectsData from "../page_data/projects.json";
 import WideContentFrame from "../components/WideContentFrame";
 import Header from "../components/Header";
 import Preview from "../components/Preview";
@@ -16,26 +16,29 @@ TO DO: Make fully responsive and mobile friendly
 */
 function SubHeader({ text }: { text: string }) {
   return (
-    <strong className="block pb-2 pt-6 font-medium text-xl">{text}</strong>
+    <strong className="block px-2 pb-2 pt-6 font-medium text-xl">{text}</strong>
   );
 }
 function Home() {
   return (
     <>
-      <WideContentFrame bgColor="bg-light">
-        <div className="bg-light">
+      <WideContentFrame extraStyle="bg-light">
+        <div className="bg-light w-full">
           <Header header={"Portfolio Preview 👀"} textColor="text-dark" />
           <SubHeader text={"Work Experiences"} />
-          <Preview experiences={workExperiences} redirectLink={"/work"} />
+          <Preview experiences={WorksData.works} redirectLink={"/work"} />
         </div>
       </WideContentFrame>
-      <WideContentFrame bgColor="bg-light">
+      <WideContentFrame extraStyle="bg-light">
         <div className="bg-light">
           <SubHeader text={"Projects"} />
-          <Preview experiences={projects} redirectLink={"/projects"} />
+          <Preview
+            experiences={ProjectsData.projects}
+            redirectLink={"/projects"}
+          />
         </div>
       </WideContentFrame>
-      <WideContentFrame bgColor="bg-dark mt-5">
+      <WideContentFrame extraStyle="bg-dark mt-5">
         <>
           <div className="py-7">
             <ProfileImage

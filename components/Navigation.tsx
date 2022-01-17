@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TopBar from "../components/TopBar";
 import Link from "next/link";
 import Image from "next/image";
-import WideContentFrame from "./WideContentFrame";
 import GitHubIcon from "../images/github.png";
 import LinkedInIcon from "../images/linkedin.png";
-
 import SocialLinks from "../page_data/social_links.json";
+function MenuIcon() {
+  return (
+    <svg
+      fill="#808080"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="24px"
+      height="24px"
+    >
+      <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" />
+    </svg>
+  );
+}
 function LinkedInSocial({
   onClick,
 }: {
@@ -53,26 +64,88 @@ function Socials() {
   );
 }
 function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isInitial, setIsInitial] = useState(true);
+
   return (
-    <WideContentFrame bgColor="bg-light">
-      <TopBar socials={Socials()}>
-        <>
-          <div className="text-5xl font-medium">Adriel Kim</div>
+    <>
+      <div className="p-2">
+        <div className="bg-light hidden m-auto w-full sm:block sm:w-normal">
+          <TopBar socials={Socials()}>
+            <>
+              <h1 className="text-5xl font-medium">Adriel Kim</h1>
+              <Link href="/">
+                <button className="font-medium text-xl">Home Page</button>
+              </Link>
+              <Link href="/work">
+                <button className="font-medium text-xl">Work</button>
+              </Link>
+              <Link href="/projects">
+                <button className="font-medium text-xl">Projects</button>
+              </Link>
+              <Link href="/resume">
+                <button className="font-medium text-xl">Resume</button>
+              </Link>
+            </>
+          </TopBar>
+        </div>
+
+        <div className="flex items-center bg-light block m-auto sm:hidden">
+          <h1 className="text-2xl font-medium py-2 flex-grow">Adriel Kim</h1>
+          <button
+            onClick={() => {
+              setIsOpen(!isOpen);
+              if (isInitial) {
+                setIsInitial(false); //<- allows navigation menu to show after first click. This is to prevent closing animation from running on page load
+              }
+            }}
+          >
+            <MenuIcon />
+          </button>
+        </div>
+      </div>
+      {!isInitial && (
+        <div
+          className={`${
+            isOpen ? "menu-open" : "menu-close"
+          } flex flex-col absolute overflow-hidden gap-2 z-10 w-full bg-light border-t p-2 py-5 shadow-xl`}
+        >
           <Link href="/">
-            <button className="font-medium text-xl">Home Page</button>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="font-medium border rounded text-xl"
+            >
+              Home Page
+            </button>
           </Link>
           <Link href="/work">
-            <button className="font-medium text-xl">Work</button>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="font-medium border rounded text-xl"
+            >
+              Work
+            </button>
           </Link>
           <Link href="/projects">
-            <button className="font-medium text-xl">Projects</button>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="font-medium border rounded text-xl"
+            >
+              Projects
+            </button>
           </Link>
           <Link href="/resume">
-            <button className="font-medium text-xl">Resume</button>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="font-medium border rounded text-xl"
+            >
+              Resume
+            </button>
           </Link>
-        </>
-      </TopBar>
-    </WideContentFrame>
+          <div className="flex justify-center mt-7">{Socials()}</div>
+        </div>
+      )}
+    </>
   );
 }
 

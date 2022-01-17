@@ -3,8 +3,6 @@ import { Experience } from "../interfaces/Experience";
 import OpenIcon from "../images/open-icon.png";
 import Image from "next/image";
 
-//bascically title header(name, date,), image and fading description (read more redirect).
-
 function Media({ exp }: { exp: Experience }) {
   const handleProjectLink = (link: string | null | undefined) => {
     if (link) {
@@ -15,7 +13,7 @@ function Media({ exp }: { exp: Experience }) {
     }
   };
   return (
-    <div className="my-5 border-b">
+    <div className="my-5 border-b px-2">
       <div className="text-xl font-medium">
         {exp.title}
         {exp.role && (
@@ -29,7 +27,11 @@ function Media({ exp }: { exp: Experience }) {
       <div className="my-5">
         {exp.img && (
           <div className="flex justify-center shadow-lg">
-            <Image className="rounded" src={exp.img} layout="intrinsic" />
+            <Image
+              className="rounded"
+              src={require(`../images/${exp.img}`)}
+              layout="intrinsic"
+            />
           </div>
         )}
         <div className="text-base pt-2.5">{exp.detailed}</div>

@@ -12,8 +12,8 @@ type AppProps = {
 function ProfileImage({ image, caption, width, height }: AppProps) {
   return (
     <>
-      <div className="flex justify-center items-center gap-5">
-        <div className="w-700px">
+      <div className="flex justify-center items-center gap-5 p-2">
+        <div className="w-700px hidden md:block">
           <Image
             className="rounded-full"
             src={image}
@@ -22,7 +22,15 @@ function ProfileImage({ image, caption, width, height }: AppProps) {
           />
         </div>
 
-        <div className="flex flex-col justify-end gap-1">
+        <div className="flex flex-col justify-end items-center md:items-start gap-1">
+          <div className="md:hidden w-1/2">
+            <Image
+              className="rounded-full"
+              src={image}
+              width={width}
+              height={height}
+            />
+          </div>
           <strong className="block font-bold text-2xl text-turquoise">
             {HomeStaticData.name}
           </strong>

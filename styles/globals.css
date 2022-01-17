@@ -21,3 +21,29 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@keyframes open {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes close {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.menu-open {
+  animation-name: open;
+  animation-duration: 0.25s;
+}
+.menu-close {
+  animation-name: close;
+  animation-duration: 0.25s;
+  transform: translateX(-100%);
+}

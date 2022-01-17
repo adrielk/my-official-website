@@ -1,17 +1,14 @@
 import React from "react";
-import BottomSpacer from "./BottomSpacer";
 function WideContentFrame({
   children,
-  bgColor,
+  extraStyle,
 }: {
   children: JSX.Element;
-  bgColor: string;
+  extraStyle: string;
 }) {
   return (
-    <div className={bgColor}>
-      <div className="flex justify-center">
-        <div className="w-normal">{children}</div>
-      </div>
+    <div className={`flex justify-center ${extraStyle}`}>
+      <div className="w-full sm:w-normal">{children}</div>
     </div>
   );
 }

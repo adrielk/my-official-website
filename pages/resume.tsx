@@ -1,9 +1,10 @@
 import React from "react";
+import ResumeData from "../page_data/resume.json";
 function Resume() {
   return (
     <div className="flex justify-center pt-5">
       <iframe
-        src="https://drive.google.com/file/d/1gcx4u1N5KCCVrMZPg28S8KMEBrGSUBSM/preview"
+        src={ResumeData.link}
         width="640"
         height="825"
         allow="autoplay"
