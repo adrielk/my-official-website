@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>{HomeData.name}'s Portfolio Website</title>
+        <title>{`${HomeData.name}'s Portfolio Website`}</title>
         <meta property="og:title" content="My page title" key="title" />
       </Head>
       <Navigation />
