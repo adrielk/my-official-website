@@ -18,7 +18,6 @@ function Projects() {
                 </div>
               );
             })}
-          {/* <BottomSpacer /> */}
         </>
       </WideContentFrame>
     </>

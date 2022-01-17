@@ -18,7 +18,6 @@ function Work() {
                 </div>
               );
             })}
-          {/* <BottomSpacer /> */}
         </>
       </WideContentFrame>
     </>
