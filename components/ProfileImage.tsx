@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import HomeStaticData from "../page_data/home.json";
+import HomeData from "../page_data/home.json";
 
 type AppProps = {
   image: StaticImageData;
@@ -32,7 +32,7 @@ function ProfileImage({ image, caption, width, height }: AppProps) {
             />
           </div>
           <strong className="block font-bold text-2xl text-turquoise">
-            {HomeStaticData.name}
+            {HomeData.name}
           </strong>
           <div className="block text-xl text-light">
             University of Virginia Student, exploring software engineering and

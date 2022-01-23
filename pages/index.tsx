@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileImage from "../components/ProfileImage";
 import ProfilePic from "../images/imcool.jpg";
-import HomeStaticData from "../page_data/home.json";
+import HomeData from "../page_data/home.json";
 import WorksData from "../page_data/work.json";
 import ProjectsData from "../page_data/projects.json";
 import WideContentFrame from "../components/WideContentFrame";
@@ -45,7 +45,7 @@ function Home() {
               image={ProfilePic}
               width="500"
               height="500"
-              caption={HomeStaticData.bio}
+              caption={HomeData.bio}
             />
           </div>
         </>

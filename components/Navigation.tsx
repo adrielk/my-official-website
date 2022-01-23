@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TopBar from "../components/TopBar";
 import Link from "next/link";
 import Image from "next/image";
 import GitHubIcon from "../images/github.png";
 import LinkedInIcon from "../images/linkedin.png";
 import SocialLinks from "../page_data/social_links.json";
+import HomeData from "../page_data/home.json";
 function MenuIcon() {
   return (
     <svg
@@ -73,7 +74,11 @@ function Navigation() {
         <div className="bg-light hidden m-auto w-full sm:block sm:w-normal">
           <TopBar socials={Socials()}>
             <>
-              <h1 className="text-5xl font-medium">Adriel Kim</h1>
+              <Link href="/">
+                <h1 className="text-5xl font-medium cursor-pointer">
+                  {HomeData.name}
+                </h1>
+              </Link>
               <Link href="/">
                 <button className="font-medium text-xl">Home Page</button>
               </Link>
@@ -91,7 +96,9 @@ function Navigation() {
         </div>
 
         <div className="flex items-center bg-light block m-auto sm:hidden">
-          <h1 className="text-2xl font-medium py-2 flex-grow">Adriel Kim</h1>
+          <h1 className="text-2xl font-medium py-2 flex-grow">
+            {HomeData.name}
+          </h1>
           <button
             onClick={() => {
               setIsOpen(!isOpen);
