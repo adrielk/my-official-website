@@ -3,6 +3,48 @@ import { Experience } from "../interfaces/Experience";
 import Image from "next/image";
 import OpenIcon from "../images/open-icon.png";
 import { useRouter } from "next/router";
+//animation
+// import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+function PreviewItem({
+  exp,
+  redirectLink,
+  i,
+}: {
+  exp: Experience;
+  redirectLink: string;
+  i: number;
+}) {
+  const router = useRouter();
+  return (
+    <div
+      key={exp.title}
+      className={`border-b border-t rounded-0 sm:rounded p-2 shadow-lg ${
+        i % 2 == 0 ? "bg-gray-200" : "bg-light"
+      } py-2.5`}
+    >
+      <div className="py-2 font-medium">
+        {exp.title}
+        {exp.role && (
+          <>
+            {" "}
+            - <span className="italic">{exp.role}</span>
+          </>
+        )}
+      </div>
+      <div className="text-base font-normal ">
+        {exp.detailed?.split(" ").slice(0, 50).join(" ")} ...{"  "}
+        <a href={`#${exp.title}`}>
+          <ViewMore
+            onClick={() => {
+              router.push(redirectLink);
+            }}
+          />
+        </a>
+      </div>
+    </div>
+  );
+}
 
 function ViewMore({
   onClick,
@@ -28,40 +70,19 @@ function Preview({
   experiences: Experience[];
   redirectLink: string;
 }) {
-  const router = useRouter();
   return (
+    // <TransitionGroup appear>
     <>
       {experiences.map((exp, i) => {
         return (
-          <div
-            key={exp.title}
-            className={`border-b border-t rounded-0 sm:rounded p-2 shadow-lg ${
-              i % 2 == 0 ? "bg-gray-200" : "bg-light"
-            } py-2.5`}
-          >
-            <div className="py-2 font-medium">
-              {exp.title}
-              {exp.role && (
-                <>
-                  {" "}
-                  - <span className="italic">{exp.role}</span>
-                </>
-              )}
-            </div>
-            <div className="text-base font-normal ">
-              {exp.detailed?.split(" ").slice(0, 50).join(" ")} ...{"  "}
-              <a href={`#${exp.title}`}>
-                <ViewMore
-                  onClick={() => {
-                    router.push(redirectLink);
-                  }}
-                />
-              </a>
-            </div>
-          </div>
+          <PreviewItem {...{ exp, redirectLink, i }} />
+          // <CSSTransition key={exp} timeout={{ enter: 500, exit: 300 }}>
+          //   {}
+          // </CSSTransition>
         );
       })}
     </>
+    // </TransitionGroup>
   );
 }
 

@@ -22,7 +22,7 @@ a {
   box-sizing: border-box;
 }
 
-@keyframes open {
+@keyframes open-menu {
   from {
     transform: translateX(-100%);
   }
@@ -30,7 +30,7 @@ a {
     transform: translateX(0%);
   }
 }
-@keyframes close {
+@keyframes close-menu {
   from {
     transform: translateX(0%);
   }
@@ -38,12 +38,30 @@ a {
     transform: translateX(-100%);
   }
 }
-.menu-open {
-  animation-name: open;
+
+@keyframes swoosh {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateX(0) scale(1);
+  }
+}
+
+.menu--open {
+  animation-name: open-menu;
   animation-duration: 0.25s;
 }
-.menu-close {
-  animation-name: close;
+.menu--close {
+  animation-name: close-menu;
   animation-duration: 0.25s;
   transform: translateX(-100%);
+}
+
+.profile {
+  animation-name: swoosh;
+  animation-duration: 0.5s;
 }

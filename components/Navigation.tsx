@@ -80,7 +80,7 @@ function Navigation() {
                 </h1>
               </Link>
               <Link href="/">
-                <button className="font-medium text-xl">Home Page</button>
+                <button className="font-medium text-xl">Home</button>
               </Link>
               <Link href="/work">
                 <button className="font-medium text-xl">Work</button>
@@ -96,9 +96,11 @@ function Navigation() {
         </div>
 
         <div className="flex items-center bg-light block m-auto sm:hidden">
-          <h1 className="text-2xl font-medium py-2 flex-grow">
-            {HomeData.name}
-          </h1>
+          <Link href="/">
+            <h1 className="text-2xl font-medium py-2 flex-grow">
+              {HomeData.name}
+            </h1>
+          </Link>
           <button
             onClick={() => {
               setIsOpen(!isOpen);
@@ -114,7 +116,7 @@ function Navigation() {
       {!isInitial && (
         <div
           className={`${
-            isOpen ? "menu-open" : "menu-close"
+            isOpen ? "menu--open" : "menu--close"
           } flex flex-col absolute overflow-hidden gap-2 z-10 w-full bg-light border-t p-2 py-5 shadow-xl`}
         >
           <Link href="/">
@@ -122,7 +124,7 @@ function Navigation() {
               onClick={() => setIsOpen(false)}
               className="font-medium border rounded text-xl"
             >
-              Home Page
+              Home
             </button>
           </Link>
           <Link href="/work">

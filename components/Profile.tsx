@@ -9,7 +9,7 @@ type AppProps = {
   height: string;
 };
 
-function ProfileImage({ image, caption, width, height }: AppProps) {
+function Profile({ image, caption, width, height }: AppProps) {
   return (
     <>
       <div className="flex justify-center items-center gap-5 p-2">
@@ -47,4 +47,4 @@ function ProfileImage({ image, caption, width, height }: AppProps) {
   );
 }
 
-export default ProfileImage;
+export default Profile;

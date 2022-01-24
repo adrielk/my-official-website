@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImage from "../components/ProfileImage";
+import Profile from "../components/Profile";
 import ProfilePic from "../images/imcool.jpg";
 import HomeData from "../page_data/home.json";
 import WorksData from "../page_data/work.json";
@@ -22,6 +22,18 @@ function SubHeader({ text }: { text: string }) {
 function Home() {
   return (
     <>
+      <WideContentFrame extraStyle="bg-dark mt-5">
+        <>
+          <div className="profile py-7">
+            <Profile
+              image={ProfilePic}
+              width="500"
+              height="500"
+              caption={HomeData.bio}
+            />
+          </div>
+        </>
+      </WideContentFrame>
       <WideContentFrame extraStyle="bg-light">
         <div className="bg-light w-full">
           <Header header={"Portfolio Preview 👀"} textColor="text-dark" />
@@ -37,18 +49,6 @@ function Home() {
             redirectLink={"/projects"}
           />
         </div>
-      </WideContentFrame>
-      <WideContentFrame extraStyle="bg-dark mt-5">
-        <>
-          <div className="py-7">
-            <ProfileImage
-              image={ProfilePic}
-              width="500"
-              height="500"
-              caption={HomeData.bio}
-            />
-          </div>
-        </>
       </WideContentFrame>
     </>
   );
