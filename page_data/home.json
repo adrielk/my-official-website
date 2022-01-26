@@ -1,4 +1,6 @@
 {
   "bio": "Welcome to my page! I'm a junior at the University of Virginia pursuing a Bachelor of Science in Computer Science working toward my career in software engineering and exploring the world of data science. In anything that I do, I strive to deliver quality work that I can be proud of. My main goal is to build my technical skills for doing work centered around enabling people to achieve more and lead happier lives.",
-  "name": "Adriel Kim"
+  "title": "University of Virginia Student, exploring software engineering and data science",
+  "name": "Adriel Kim",
+  "img": "imcool.jpg"
 }

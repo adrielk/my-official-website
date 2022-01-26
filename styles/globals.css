@@ -65,3 +65,13 @@ a {
   animation-name: swoosh;
   animation-duration: 0.5s;
 }
+
+.thumbnail:hover {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.05);
+}
+
+.thumbnail {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1);
+}

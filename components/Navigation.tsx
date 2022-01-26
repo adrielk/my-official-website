@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import TopBar from "../components/TopBar";
 import Link from "next/link";
 import Image from "next/image";
-import GitHubIcon from "../images/github.png";
-import LinkedInIcon from "../images/linkedin.png";
+import GitHubIcon from "/public/images/github.png";
+import LinkedInIcon from "/public/images/linkedin.png";
 import SocialLinks from "../page_data/social_links.json";
 import HomeData from "../page_data/home.json";
 function MenuIcon() {
@@ -97,7 +97,7 @@ function Navigation() {
 
         <div className="flex items-center bg-light block m-auto sm:hidden">
           <Link href="/">
-            <h1 className="text-2xl font-medium py-2 flex-grow">
+            <h1 className="text-2xl font-medium py-2 flex-grow cursor-pointer">
               {HomeData.name}
             </h1>
           </Link>

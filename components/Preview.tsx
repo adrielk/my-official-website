@@ -1,10 +1,8 @@
 import React from "react";
 import { Experience } from "../interfaces/Experience";
 import Image from "next/image";
-import OpenIcon from "../images/open-icon.png";
+import OpenIcon from "/public/images/open-icon.png";
 import { useRouter } from "next/router";
-//animation
-// import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function PreviewItem({
   exp,
@@ -16,31 +14,62 @@ function PreviewItem({
   i: number;
 }) {
   const router = useRouter();
+  const handleClick = () => {
+    router.push(redirectLink);
+  };
   return (
     <div
       key={exp.title}
-      className={`border-b border-t rounded-0 sm:rounded p-2 shadow-lg ${
+      className={`flex flex-col sm:flex-row items-center border-b border-t rounded-0 sm:rounded p-2 shadow-lg ${
         i % 2 == 0 ? "bg-gray-200" : "bg-light"
       } py-2.5`}
     >
-      <div className="py-2 font-medium">
-        {exp.title}
-        {exp.role && (
-          <>
-            {" "}
-            - <span className="italic">{exp.role}</span>
-          </>
-        )}
-      </div>
-      <div className="text-base font-normal ">
-        {exp.detailed?.split(" ").slice(0, 50).join(" ")} ...{"  "}
-        <a href={`#${exp.title}`}>
-          <ViewMore
-            onClick={() => {
-              router.push(redirectLink);
-            }}
+      {/* change layout in mobile */}
+      {exp.thumbnail && (
+        <a
+          href={`#${exp.title}`}
+          onClick={handleClick}
+          className="thumbnail flex-none m-3 w-40"
+        >
+          <Image
+            className="rounded"
+            alt="Thumbnail picture"
+            layout="intrinsic"
+            src={require(`/public/images/${exp.thumbnail}`)}
           />
         </a>
+      )}
+      {!exp.thumbnail && exp.img && (
+        <a
+          href={`#${exp.title}`}
+          onClick={handleClick}
+          className="thumbnail relative flex-none m-3 w-full sm:w-60 h-40 shadow-md"
+        >
+          <Image
+            className="rounded"
+            alt="Thumbnail picture"
+            layout="fill"
+            objectFit="cover"
+            src={require(`/public/images/${exp.img}`)}
+          />
+        </a>
+      )}
+      <div>
+        <span className="block py-2 font-medium">
+          {exp.title}
+          {exp.role && (
+            <>
+              {" "}
+              - <span className="italic">{exp.role}</span>
+            </>
+          )}
+        </span>
+        <span className="block text-base font-normal ">
+          {exp.detailed?.split(" ").slice(0, 50).join(" ")} ...{"  "}
+          <a href={`#${exp.title}`}>
+            <ViewMore onClick={handleClick} />
+          </a>
+        </span>
       </div>
     </div>
   );

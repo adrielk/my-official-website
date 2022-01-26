@@ -26,7 +26,7 @@ function Profile({ image, caption, width, height }: AppProps) {
           <div className="md:hidden w-1/2">
             <Image
               className="rounded-full"
-              src={image}
+              src={require(`/public/images/${HomeData.img}`)}
               width={width}
               height={height}
             />
@@ -34,10 +34,7 @@ function Profile({ image, caption, width, height }: AppProps) {
           <strong className="block font-bold text-2xl text-turquoise">
             {HomeData.name}
           </strong>
-          <div className="block text-xl text-light">
-            University of Virginia Student, exploring software engineering and
-            data science
-          </div>
+          <div className="block text-xl text-light">{HomeData.title}</div>
           <small className="flex-grow-0 my-2 block text-base text-light">
             {caption}
           </small>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Experience } from "../interfaces/Experience";
-import OpenIcon from "../images/open-icon.png";
+import OpenIcon from "/public/images/open-icon.png";
 import Image from "next/image";
 
 function Media({ exp }: { exp: Experience }) {
@@ -29,7 +29,7 @@ function Media({ exp }: { exp: Experience }) {
           <div className="flex justify-center shadow-lg">
             <Image
               className="rounded"
-              src={require(`../images/${exp.img}`)}
+              src={require(`/public/images/${exp.img}`)}
               layout="intrinsic"
             />
           </div>

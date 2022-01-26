@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from "../components/Profile";
-import ProfilePic from "../images/imcool.jpg";
+import ProfilePic from "/public/images/imcool.jpg";
 import HomeData from "../page_data/home.json";
 import WorksData from "../page_data/work.json";
 import ProjectsData from "../page_data/projects.json";
@@ -42,7 +42,7 @@ function Home() {
         </div>
       </WideContentFrame>
       <WideContentFrame extraStyle="bg-light">
-        <div className="bg-light">
+        <div>
           <SubHeader text={"Projects"} />
           <Preview
             experiences={ProjectsData.projects}

@@ -1,10 +1,29 @@
 {
   "works": [
     {
+      "title": "University of Virginia",
+      "role": "FloodWatch Project Research Assistant",
+      "blurb": "Project \"FloodWatch\" under Professor Rich Nguyen to develop a data infrastructure and progressive web application for emergency response and fast decision support for the Ho Chi Minh City Department of Science and Technology",
+      "img": "floodwatch.png",
+      "detailed": "As part of the FloodWatch team, I'm primarily focusing on developing the front-end and API for the FloodWatch progressive web application (PWA). With this application, users can upload reports of nearby floods, which are stored in an Amazon DynamoDB database, to notify other users of the flooding situation in real time. Users can view these reports on a map displayed using Mapbox GL JS. They can also filter by time period and severity. Currently, I am working on visualizing historical flood data on the map.",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "AWS SDK for JavaScript",
+        "AWS Chalice",
+        "boto3",
+        "Mapbox GL JS",
+        "Tailwind CSS",
+        "Netlify"
+      ],
+      "link": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2026050&HistoricalAwards=false"
+    },
+    {
       "title": "Curiosity Stream",
       "role": "Software Engineering Intern",
       "blurb": "A streaming platform for educational entertainment",
       "img": "curious-work.png",
+      "thumbnail": "cslogo.png",
       "detailed": "At Curiosity Stream, I worked as a team lead and developer for an advanced tagging system to solve the problem of low-quality tagging and poor discoverability of media. My task was to develop an internal web application that would provider greater assistance for the tagger. This was accomplished with features such as a management system for tags, tag suggestions, tag search and pagination, and a tagging effectiveness bar to assess quality of tags. A huge challenge with this project was requirements gathering as well as building reusable and scalable software. Throughout the requirements gathering process, I learned how to compromise and communicate complex ideas more effectively. When developing the web app, I learned how to modularize code into reusable and effective chunks.",
       "technologies": [
         "Next.js",
@@ -20,15 +39,17 @@
       "role": "Web Development Intern",
       "blurb": "A start-up developing motion-capture hardware and software for gaining insights on athlete performance.",
       "img": "brave-work.png",
+      "thumbnail": "bravelogo.png",
       "detailed": "I developed a motion data visualization dashboard and a message/chat system for Brave Virtual World's web platform. This platform will be used to allow coaches and physical therapists analyze athlete performance and determine ways it can be improved. In addition, this platform enables communication with a coach and all his/her athletes. A major challenge with this project was developing the data visualization dashboard in such a way that would provide full flexibility for the user. This required forethought when engineering the components involved in this feature.",
       "technologies": ["React", "AWS Amplify", "Firebase", "Material-UI"],
       "link": ""
     },
     {
-      "title": "University of Virginia SEAS",
+      "title": "University of Virginia",
       "role": "Undergraduate Parallel Computing Researcher",
       "blurb": "Work under Professor Kevin Skadron and the Fermilab group involved in astronomy and computing",
       "img": "research.png",
+      "thumbnail": "uvalogo.png",
       "detailed": "Using performance profiling tools such as cProfile and KCachegrind, I identified areas of the code base in need of GPU optimization. I identified an image processing step, called brighter-fatter correction, which would significantly benefit from GPU optimization. Using CUDA C++, NVIDIA libraries and parallel programming techniques, I implemented the function and achieved a speed up of nearly 11X. Major challenges with this project were adapting to the parallel programming paradigm and debugging this type of code. Many of my challenges were solved by taking advantage of NVIDIA library functions, frequent communication with professors, and use of many external resources.",
       "technologies": ["C++", "CUDA", "cProfile", "KCachegrind", "Python"],
       "link": "https://drive.google.com/file/d/1NaR2gQv4NEDcHnRXpn13ySvnyY3BCY1Q/view?usp=sharing"
