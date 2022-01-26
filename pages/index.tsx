@@ -22,7 +22,7 @@ function SubHeader({ text }: { text: string }) {
 function Home() {
   return (
     <>
-      <WideContentFrame extraStyle="bg-dark mt-5">
+      <WideContentFrame extraStyle="bg-dark">
         <>
           <div className="profile py-7">
             <Profile
@@ -35,7 +35,7 @@ function Home() {
         </>
       </WideContentFrame>
       <WideContentFrame extraStyle="bg-light">
-        <div className="bg-light w-full">
+        <div className="bg-light w-full pt-2">
           <Header header={"Portfolio Preview 👀"} textColor="text-dark" />
           <SubHeader text={"Work Experiences"} />
           <Preview experiences={WorksData.works} redirectLink={"/work"} />

@@ -71,18 +71,15 @@ function Preview({
   redirectLink: string;
 }) {
   return (
-    // <TransitionGroup appear>
     <>
       {experiences.map((exp, i) => {
         return (
-          <PreviewItem {...{ exp, redirectLink, i }} />
-          // <CSSTransition key={exp} timeout={{ enter: 500, exit: 300 }}>
-          //   {}
-          // </CSSTransition>
+          <div key={exp.title}>
+            <PreviewItem {...{ exp, redirectLink, i }} />
+          </div>
         );
       })}
     </>
-    // </TransitionGroup>
   );
 }
 
