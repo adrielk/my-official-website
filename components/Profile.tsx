@@ -34,7 +34,15 @@ function Profile({ image, caption, width, height }: AppProps) {
           <strong className="block font-bold text-2xl text-turquoise">
             {HomeData.name}
           </strong>
-          <div className="block text-xl text-light">{HomeData.title}</div>
+          <a
+            className="no-underline hover:underline text-turquoise text-sm"
+            href={`mailto: ${HomeData.email}`}
+          >
+            {HomeData.email}
+          </a>
+          <div className="block text-xl text-light text-center sm:text-left">
+            {HomeData.title}
+          </div>
           <small className="flex-grow-0 my-2 block text-base text-light">
             {caption}
           </small>
