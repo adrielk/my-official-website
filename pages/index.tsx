@@ -7,7 +7,6 @@ import ProjectsData from "../page_data/projects.json";
 import WideContentFrame from "../components/WideContentFrame";
 import Header from "../components/Header";
 import Preview from "../components/Preview";
-
 /*
 TO DO: Make fully responsive and mobile friendly
 - Add sliding animation between pages
@@ -24,7 +23,7 @@ function Home() {
     <>
       <WideContentFrame extraStyle="bg-dark">
         <>
-          <div className="profile py-7">
+          <div className="py-7">
             <Profile
               image={ProfilePic}
               width="500"

@@ -1,5 +1,6 @@
 import React from "react";
 import ResumeData from "../page_data/resume.json";
+
 function Resume() {
   return (
     <div className="flex justify-center pt-5">

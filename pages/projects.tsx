@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Media from "../components/Media";
 import BottomSpacer from "../components/BottomSpacer";
 import ProjectsData from "../page_data/projects.json";
+
 function Projects() {
   return (
     <>

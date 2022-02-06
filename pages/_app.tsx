@@ -4,6 +4,7 @@ import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import HomeData from "../page_data/home.json";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
