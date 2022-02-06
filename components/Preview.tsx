@@ -49,7 +49,7 @@ function PreviewItem({
         <a
           href={`#${exp.title}`}
           onClick={handleClick}
-          className="thumbnail flex-none m-3 w-40"
+          className="thumbnail flex-none m-3 w-full sm:w-40"
         >
           <Fade left>
             <Image
