@@ -6,7 +6,7 @@ import GitHubIcon from "/public/images/github.png";
 import LinkedInIcon from "/public/images/linkedin.png";
 import SocialLinks from "../page_data/social_links.json";
 import HomeData from "../page_data/home.json";
-import Pulse from "react-reveal/Pulse";
+
 function MenuIcon() {
   return (
     <svg
@@ -68,7 +68,6 @@ function Socials() {
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInitial, setIsInitial] = useState(true);
-  const [pulse, setPulse] = useState(false);
   return (
     <>
       <div className="p-2">
@@ -76,14 +75,9 @@ function Navigation() {
           <TopBar socials={Socials()}>
             <>
               <Link href="/">
-                <Pulse spy={pulse}>
-                  <h1
-                    onClick={() => setPulse(!pulse)}
-                    className="text-5xl font-medium cursor-pointer"
-                  >
-                    {HomeData.name}
-                  </h1>
-                </Pulse>
+                <h1 className="text-5xl font-medium cursor-pointer">
+                  {HomeData.name}
+                </h1>
               </Link>
               <Link href="/">
                 <button className="font-medium text-xl">Home</button>

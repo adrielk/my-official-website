@@ -2,7 +2,7 @@ import React from "react";
 import { Experience } from "../interfaces/Experience";
 import OpenIcon from "/public/images/open-icon.png";
 import Image from "next/image";
-import Fade from "react-reveal/Fade";
+const Fade = require("react-reveal/Fade");
 
 function Media({ exp }: { exp: Experience }) {
   const handleProjectLink = (link: string | null | undefined) => {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import HomeData from "../page_data/home.json";
-import Roll from "react-reveal/Roll";
-import Fade from "react-reveal/Fade";
-import Swing from "react-reveal/Swing";
+const Roll = require("react-reveal/Roll");
+const Fade = require("react-reveal/Fade");
+const Swing = require("react-reveal/Swing");
 
 type AppProps = {
   image: StaticImageData;

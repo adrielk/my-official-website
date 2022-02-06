@@ -3,7 +3,7 @@ import { Experience } from "../interfaces/Experience";
 import Image from "next/image";
 import OpenIcon from "/public/images/open-icon.png";
 import { useRouter } from "next/router";
-import Fade from "react-reveal/Fade";
+const Fade = require("react-reveal/Fade");
 
 function PreviewItem({
   exp,
