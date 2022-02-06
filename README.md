@@ -112,6 +112,7 @@ Upload your resume to your Google Drive and paste the preview link in the `resum
 You can add your social media links in `page_data/social_links.json`
 
 ## Deploy on Vercel
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details!
