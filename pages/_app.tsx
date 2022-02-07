@@ -13,7 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="My page title" key="title" />
       </Head>
       <Navigation />
-      <Component {...pageProps} />
+      <div className="pt-20">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </>
   );

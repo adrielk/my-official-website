@@ -15,7 +15,7 @@ type AppProps = {
 function Profile({ image, caption, width, height }: AppProps) {
   const [swing, setSwing] = useState(false);
   return (
-    <>
+    <div className="overflow-hidden">
       <div className="flex justify-center items-center gap-5 p-2">
         <div className="w-700px hidden md:block">
           <Roll left delay={500}>
@@ -66,7 +66,7 @@ function Profile({ image, caption, width, height }: AppProps) {
           </Fade>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

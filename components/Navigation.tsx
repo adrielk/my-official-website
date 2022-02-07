@@ -70,12 +70,12 @@ function Navigation() {
   const [isInitial, setIsInitial] = useState(true);
   return (
     <>
-      <div className="p-2">
-        <div className="bg-light hidden m-auto w-full sm:block sm:w-normal">
+      <div className="fixed w-full z-20 bg-light">
+        <div className="hidden m-auto w-full sm:block sm:w-normal">
           <TopBar socials={Socials()}>
             <>
               <Link href="/">
-                <h1 className="text-5xl font-medium cursor-pointer">
+                <h1 className="text-5xl font-medium cursor-pointer pl-2">
                   {HomeData.name}
                 </h1>
               </Link>
@@ -97,7 +97,7 @@ function Navigation() {
 
         <div className="flex items-center bg-light block m-auto sm:hidden">
           <Link href="/">
-            <h1 className="text-2xl font-medium py-2 flex-grow cursor-pointer">
+            <h1 className="text-2xl font-medium p-2 flex-grow cursor-pointer">
               {HomeData.name}
             </h1>
           </Link>
@@ -112,48 +112,48 @@ function Navigation() {
             <MenuIcon />
           </button>
         </div>
+        {!isInitial && (
+          <div
+            className={`${
+              isOpen ? "menu--open" : "menu--close"
+            } flex flex-col absolute overflow-hidden gap-2 z-10 w-full bg-light border-t p-2 py-5 shadow-xl`}
+          >
+            <Link href="/">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="font-medium border rounded text-xl"
+              >
+                Home
+              </button>
+            </Link>
+            <Link href="/work">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="font-medium border rounded text-xl"
+              >
+                Work
+              </button>
+            </Link>
+            <Link href="/projects">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="font-medium border rounded text-xl"
+              >
+                Projects
+              </button>
+            </Link>
+            <Link href="/resume">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="font-medium border rounded text-xl"
+              >
+                Resume
+              </button>
+            </Link>
+            <div className="flex justify-center mt-7">{Socials()}</div>
+          </div>
+        )}
       </div>
-      {!isInitial && (
-        <div
-          className={`${
-            isOpen ? "menu--open" : "menu--close"
-          } flex flex-col absolute overflow-hidden gap-2 z-10 w-full bg-light border-t p-2 py-5 shadow-xl`}
-        >
-          <Link href="/">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="font-medium border rounded text-xl"
-            >
-              Home
-            </button>
-          </Link>
-          <Link href="/work">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="font-medium border rounded text-xl"
-            >
-              Work
-            </button>
-          </Link>
-          <Link href="/projects">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="font-medium border rounded text-xl"
-            >
-              Projects
-            </button>
-          </Link>
-          <Link href="/resume">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="font-medium border rounded text-xl"
-            >
-              Resume
-            </button>
-          </Link>
-          <div className="flex justify-center mt-7">{Socials()}</div>
-        </div>
-      )}
     </>
   );
 }
