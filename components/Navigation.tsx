@@ -95,9 +95,9 @@ function Navigation() {
           </TopBar>
         </div>
 
-        <div className="flex items-center bg-light block m-auto sm:hidden">
+        <div className="flex items-center p-2 bg-light block m-auto sm:hidden">
           <Link href="/">
-            <h1 className="text-2xl font-medium p-2 flex-grow cursor-pointer">
+            <h1 className="text-2xl font-medium flex-grow cursor-pointer">
               {HomeData.name}
             </h1>
           </Link>
@@ -116,12 +116,12 @@ function Navigation() {
           <div
             className={`${
               isOpen ? "menu--open" : "menu--close"
-            } flex flex-col absolute overflow-hidden gap-2 z-10 w-full bg-light border-t p-2 py-5 shadow-xl`}
+            } flex flex-col absolute overflow-hidden z-10 w-full bg-light border-t py-5 shadow-xl`}
           >
             <Link href="/">
               <button
                 onClick={() => setIsOpen(false)}
-                className="font-medium border rounded text-xl"
+                className="font-medium p-2 text-xl"
               >
                 Home
               </button>
@@ -129,7 +129,7 @@ function Navigation() {
             <Link href="/work">
               <button
                 onClick={() => setIsOpen(false)}
-                className="font-medium border rounded text-xl"
+                className="font-medium p-2 bg-gray-200 text-xl"
               >
                 Work
               </button>
@@ -137,7 +137,7 @@ function Navigation() {
             <Link href="/projects">
               <button
                 onClick={() => setIsOpen(false)}
-                className="font-medium border rounded text-xl"
+                className="font-medium p-2 text-xl"
               >
                 Projects
               </button>
@@ -145,7 +145,7 @@ function Navigation() {
             <Link href="/resume">
               <button
                 onClick={() => setIsOpen(false)}
-                className="font-medium border rounded text-xl"
+                className="font-medium p-2 bg-gray-200 text-xl"
               >
                 Resume
               </button>
