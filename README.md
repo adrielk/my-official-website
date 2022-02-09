@@ -111,6 +111,23 @@ Upload your resume to your Google Drive and paste the preview link in the `resum
 
 You can add your social media links in `page_data/social_links.json`
 
+### Adding Metadata
+
+Metadata is important for search engine optimization (SEO) and providing an aesthetic preview of your site on social media sites such as LinkedIn, Twitter, or Facebook.
+
+You can modify metadata in `page_data/seo.json`:
+
+```
+{
+  "author": "Your name",
+  "url": "URL of your website",
+  "desc": "Short description of the contents of your site",
+  "keywords": "Comma, separated, key, words",
+  "thumbnail_url": "URL of thumbnail image. You can upload your images on https://imgbb.com/"
+}
+```
+
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
