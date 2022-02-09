@@ -7,7 +7,7 @@
       "img": "website.png",
       "detailed": "This website was built from scratch using Next.js, React, Tailwind CSS, and TypeScript. The main challenge with this project was learning TypeScript, a superset of JavaScript with types and interfaces. I chose TypeScript for this project soley for the purpose of learning it, and now I love it even more than JavaScript!",
       "technologies": ["TypeScript", "Next.js", "React", "Tailwind CSS"],
-      "link": null
+      "link": "https://github.com/adrielk/my-official-website"
     },
     {
       "title": "Library App",

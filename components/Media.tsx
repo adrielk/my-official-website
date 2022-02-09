@@ -1,6 +1,6 @@
 import React from "react";
 import { Experience } from "../interfaces/Experience";
-import OpenIcon from "/public/images/open-icon.png";
+import OpenIcon from "/public/icons/open-icon-light.png";
 import Image from "next/image";
 const Fade = require("react-reveal/Fade");
 
@@ -45,7 +45,7 @@ function Media({ exp }: { exp: Experience }) {
           {exp.link && (
             <button
               onClick={() => handleProjectLink(exp.link)}
-              className="flex items-center bg-turquoise text-dark rounded-lg mt-2 p-2.5 font-medium"
+              className="flex items-center bg-dark text-light rounded-sm mt-2 p-2.5 font-medium"
             >
               <span className="pr-2.5">Project Link</span>
               <Image

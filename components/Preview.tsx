@@ -1,7 +1,7 @@
 import React from "react";
 import { Experience } from "../interfaces/Experience";
 import Image from "next/image";
-import OpenIcon from "/public/images/open-icon.png";
+import OpenIcon from "/public/icons/open-icon.png";
 import { useRouter } from "next/router";
 const Fade = require("react-reveal/Fade");
 
