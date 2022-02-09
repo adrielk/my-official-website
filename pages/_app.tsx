@@ -28,10 +28,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="keywords"
           content="Adriel Kim, Adriel, Kim, UVA, University of Virginia, Virginia, Computer Science, Engineering"
         />
-        <meta
+        {/* <meta
           property="og:image"
           content="<%= require('../public/images/professional_profile.jpg') %>"
-        />
+        /> */}
 
         {/* <Image src={Me} /> */}
       </Head>
