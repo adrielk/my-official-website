@@ -4,6 +4,9 @@ import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import HomeData from "../page_data/home.json";
+import Image from "next/image";
+
+import Me from "../public/images/professional_profile.jpg";
 
 //to do:
 // Make SEO customizable!!! (right now it's hardcoded with your name lol)
@@ -25,7 +28,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="keywords"
           content="Adriel Kim, Adriel, Kim, UVA, University of Virginia, Virginia, Computer Science, Engineering"
         />
-        <img />
+        <meta
+          property="og:image"
+          content="<%= require('../public/images/professional_profile.jpg') %>"
+        />
+
+        {/* <Image src={Me} /> */}
       </Head>
       <Navigation />
       <div className="pt-20">
