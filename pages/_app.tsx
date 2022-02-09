@@ -18,8 +18,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={SEOContent.thumbnail_url} />
-        <meta name="author" content={SEOContent.author} />
         <meta property="og:url" content={SEOContent.url} />
+        <meta name="og:description" content={SEOContent.desc} />
+        <meta name="author" content={SEOContent.author} />
         <meta name="description" content={SEOContent.desc} />
         <meta name="keywords" content={SEOContent.keywords} />
       </Head>
