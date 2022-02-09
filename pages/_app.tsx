@@ -4,9 +4,7 @@ import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import HomeData from "../page_data/home.json";
-import Image from "next/image";
-
-import Me from "../public/images/professional_profile.jpg";
+import SEOContent from "../page_data/seo.json";
 
 //to do:
 // Make SEO customizable!!! (right now it's hardcoded with your name lol)
@@ -15,25 +13,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>{`${HomeData.name}'s Portfolio Website`}</title>
-        <meta
-          property="og:title"
-          content="Adriel Kim's Portfolio"
-          key="title"
-        />
-        <meta
-          name="description"
-          content="Adriel is a Computer Science major at the University of Virginia open to full-time software engineering jobs. Check out what he's been working on!"
-        />
-        <meta
-          name="keywords"
-          content="Adriel Kim, Adriel, Kim, UVA, University of Virginia, Virginia, Computer Science, Engineering"
-        />
-        {/* <meta
-          property="og:image"
-          content="<%= require('../public/images/professional_profile.jpg') %>"
-        /> */}
-
-        {/* <Image src={Me} /> */}
+        <meta property="og:title" content={`${HomeData.name}'s Portfolio`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={SEOContent.thumbnail_url} />
+        <meta property="og:url" content={SEOContent.url} />
+        <meta name="description" content={SEOContent.desc} />
+        <meta name="keywords" content={SEOContent.keywords} />
       </Head>
       <Navigation />
       <div className="pt-20">
