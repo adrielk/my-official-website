@@ -3,7 +3,6 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import HomeData from "../page_data/home.json";
 import SEOContent from "../page_data/seo.json";
 
 //to do:
@@ -12,10 +11,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>{`${HomeData.name}'s Portfolio Website`}</title>
-        <meta property="og:title" content={`${HomeData.name}'s Portfolio`} />
+        <title>{`${SEOContent.author}'s Portfolio Website`}</title>
+        <meta
+          property="og:title"
+          content={`${SEOContent.author}'s Portfolio`}
+        />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={SEOContent.thumbnail_url} />
+        <meta name="author" content={SEOContent.author} />
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
         <meta property="og:url" content={SEOContent.url} />
