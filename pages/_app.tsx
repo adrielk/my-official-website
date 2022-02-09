@@ -12,6 +12,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>{`${SEOContent.author}'s Portfolio Website`}</title>
+        <meta name="keywords" content={SEOContent.keywords} />
+
         <meta
           property="og:title"
           content={`${SEOContent.author}'s Portfolio`}
@@ -22,7 +24,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="og:description" content={SEOContent.desc} />
         <meta name="author" content={SEOContent.author} />
         <meta name="description" content={SEOContent.desc} />
-        <meta name="keywords" content={SEOContent.keywords} />
       </Head>
       <Navigation />
       <div className="pt-20">
