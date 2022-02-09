@@ -16,6 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content={`${HomeData.name}'s Portfolio`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={SEOContent.thumbnail_url} />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
         <meta property="og:url" content={SEOContent.url} />
         <meta name="description" content={SEOContent.desc} />
         <meta name="keywords" content={SEOContent.keywords} />
