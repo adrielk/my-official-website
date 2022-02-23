@@ -32,9 +32,13 @@ This website can easily be changed to display your own content by adding your ow
 
 Simply add your images under `public/images`. These images can either thumbnail images for the previews of your experiences or full sized images for the detailed view of your experiences.
 
-The following are examples of previews:
+#### The following are examples of previews:
 
-The following is an example of a detailed view:
+![image](https://user-images.githubusercontent.com/59209071/155375921-eb4431bf-b2ee-4d28-beb8-cd22feb6755f.png)
+
+#### The following is an example of a detailed view:
+
+![image](https://user-images.githubusercontent.com/59209071/155375995-c666fd49-8ffe-46a0-b3e5-27debcfc402f.png)
 
 ### Adding work experiences
 
