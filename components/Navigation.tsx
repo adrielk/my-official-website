@@ -26,7 +26,7 @@ function LinkedInSocial({
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <button onClick={onClick}>
+    <button onClick={onClick} aria-label="open linkedin">
       <Image
         className="rounded"
         src={LinkedInIcon}
@@ -43,7 +43,7 @@ function GithubSocial({
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <button onClick={onClick}>
+    <button onClick={onClick} aria-label="open github">
       <Image
         className="rounded"
         src={GitHubIcon}
@@ -92,16 +92,36 @@ function Navigation() {
                 </h1>
               </Link>
               <Link href="/" passHref>
-                <button className="font-medium text-xl">Home</button>
+                <button
+                  className="font-medium text-xl"
+                  aria-label="home button"
+                >
+                  Home
+                </button>
               </Link>
               <Link href="/work" passHref>
-                <button className="font-medium text-xl">Work</button>
+                <button
+                  className="font-medium text-xl"
+                  aria-label="work button"
+                >
+                  Work
+                </button>
               </Link>
               <Link href="/projects" passHref>
-                <button className="font-medium text-xl">Projects</button>
+                <button
+                  className="font-medium text-xl"
+                  aria-label="projects button"
+                >
+                  Projects
+                </button>
               </Link>
               <Link href="/resume" passHref>
-                <button className="font-medium text-xl">Resume</button>
+                <button
+                  className="font-medium text-xl"
+                  aria-label="resume button"
+                >
+                  Resume
+                </button>
               </Link>
             </>
           </TopBar>
@@ -114,6 +134,7 @@ function Navigation() {
             </h1>
           </Link>
           <button
+            aria-label="navigation menu button"
             onClick={() => {
               setIsOpen(!isOpen);
               if (isInitial) {
@@ -132,6 +153,7 @@ function Navigation() {
           >
             <Link href="/" passHref>
               <button
+                aria-label="home button"
                 onClick={() => setIsOpen(false)}
                 className="font-medium p-2 text-xl"
               >
@@ -140,6 +162,7 @@ function Navigation() {
             </Link>
             <Link href="/work" passHref>
               <button
+                aria-label="work button"
                 onClick={() => setIsOpen(false)}
                 className="font-medium p-2 bg-gray-200 text-xl"
               >
@@ -148,6 +171,7 @@ function Navigation() {
             </Link>
             <Link href="/projects" passHref>
               <button
+                aria-label="projects button"
                 onClick={() => setIsOpen(false)}
                 className="font-medium p-2 text-xl"
               >
@@ -156,6 +180,7 @@ function Navigation() {
             </Link>
             <Link href="/resume" passHref>
               <button
+                aria-label="resume button"
                 onClick={() => setIsOpen(false)}
                 className="font-medium p-2 bg-gray-200 text-xl"
               >

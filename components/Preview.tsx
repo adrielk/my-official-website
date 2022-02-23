@@ -90,7 +90,7 @@ function ViewMore({
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <button onClick={onClick}>
+    <button onClick={onClick} aria-label="view more button">
       <Image
         className={"px-2s"}
         src={OpenIcon}

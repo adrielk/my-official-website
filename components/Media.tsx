@@ -47,6 +47,7 @@ function Media({ exp }: { exp: Experience }) {
             <button
               onClick={() => handleProjectLink(exp.link)}
               className="flex items-center bg-dark text-light rounded-sm mt-2 p-2.5 font-medium"
+              aria-label="open project link"
             >
               <span className="pr-2.5">Project Link</span>
               <Image
