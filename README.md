@@ -154,7 +154,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details!
 
 
-### Making your website searchable on Google
+## Making your website searchable on Google
 
 Once you've deployed your website, you can make it appear in Google search results using the [URL Inspection Tool](https://support.google.com/webmasters/answer/9012289?hl=en)
 Using this tool, you can [request indexing](https://support.google.com/webmasters/answer/9012289?hl=en#request_indexing) of your website URL. 
