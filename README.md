@@ -147,9 +147,28 @@ You can modify metadata in `page_data/seo.json`:
 
 ```
 
-
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details!
+
+
+### Making your website searchable on Google
+
+Once you've deployed your website, you can make it appear in Google search results using the [URL Inspection Tool](https://support.google.com/webmasters/answer/9012289?hl=en)
+Using this tool, you can [request indexing](https://support.google.com/webmasters/answer/9012289?hl=en#request_indexing) of your website URL. 
+
+Note that you will need to change a small bit of code to verify your ownership of your website domain. If you haven't set up Goolge Search Console, follow these instructions first: [How to Set up Google Search Console](https://seranking.com/blog/how-to-set-up-google-search-console/).
+
+In order to verify ownership of your site, you will need to replace a few lines of code with your <meta> tag in the `pages/_app.tsx` file. Replaces lines 16-19 with the <meta> tag provided by the Google Search Console.
+
+The <meta> tag looks like this:
+
+```
+<meta
+ name="google-site-verification"
+ content="jDuXygcOqh5vnSvuFJSzJC01b6geuUSqpmO59_ZpL48"
+/>
+```
+
