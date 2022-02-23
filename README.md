@@ -1,4 +1,4 @@
-# Clean Technical Project Portfolio Website Template
+# Technical Project Portfolio Website Template
 
 This is a simple website to showcase your portfolio of technical projects. It's designed to be easy-to-use and requires no knowledge of web development to modify for your own purposes. All you need is to supply your own information about your projects and work experiences! This template is SEO friendly, mobile friendly, and accessible.
 
