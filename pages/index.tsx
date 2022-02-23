@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/Head";
 import Profile from "../components/Profile";
 import ProfilePic from "/public/images/imcool.jpg";
 import HomeData from "../page_data/home.json";
@@ -7,6 +8,7 @@ import ProjectsData from "../page_data/projects.json";
 import WideContentFrame from "../components/WideContentFrame";
 import Header from "../components/Header";
 import Preview from "../components/Preview";
+import SEOContent from "../page_data/seo.json";
 /*
 TO DO: Make fully responsive and mobile friendly
 - Add sliding animation between pages
@@ -14,13 +16,15 @@ TO DO: Make fully responsive and mobile friendly
 - SEO
 */
 function SubHeader({ text }: { text: string }) {
-  return (
-    <strong className="block px-2 pb-2 pt-6 font-medium text-xl">{text}</strong>
-  );
+  return <h2 className="block px-2 pb-2 pt-6 font-medium text-xl">{text}</h2>;
 }
 function Home() {
   return (
     <>
+      <Head>
+        <title>{SEOContent.home_page_title}</title>
+        <meta name="description" content={SEOContent.home_page_desc} />
+      </Head>
       <WideContentFrame extraStyle="bg-dark">
         <>
           <div className="py-7">
@@ -29,25 +33,26 @@ function Home() {
               width="500"
               height="500"
               caption={HomeData.bio}
+              alt_text={HomeData.img_alt}
             />
           </div>
         </>
       </WideContentFrame>
       <WideContentFrame extraStyle="bg-light">
-        <div className="bg-light w-full pt-2">
+        <section className="bg-light w-full pt-2">
           <Header header={"Portfolio Preview 👀"} textColor="text-dark" />
           <SubHeader text={"Work Experiences"} />
           <Preview experiences={WorksData.works} redirectLink={"/work"} />
-        </div>
+        </section>
       </WideContentFrame>
       <WideContentFrame extraStyle="bg-light">
-        <div>
+        <section>
           <SubHeader text={"Projects"} />
           <Preview
             experiences={ProjectsData.projects}
             redirectLink={"/projects"}
           />
-        </div>
+        </section>
       </WideContentFrame>
     </>
   );

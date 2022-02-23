@@ -19,7 +19,7 @@ function PreviewItem({
     router.push(redirectLink);
   };
   return (
-    <div
+    <article
       key={exp.title}
       className={`flex flex-col sm:flex-row items-center overflow-hidden border-b border-t rounded-0 sm:rounded p-2 shadow-lg ${
         i % 2 == 0 ? "bg-gray-200" : "bg-light"
@@ -80,7 +80,7 @@ function PreviewItem({
           </span>
         </div>
       </Fade>
-    </div>
+    </article>
   );
 }
 
@@ -112,9 +112,9 @@ function Preview({
     <>
       {experiences.map((exp, i) => {
         return (
-          <div key={exp.title}>
+          <article key={exp.title}>
             <PreviewItem {...{ exp, redirectLink, i }} />
-          </div>
+          </article>
         );
       })}
     </>

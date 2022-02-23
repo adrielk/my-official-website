@@ -13,7 +13,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>{`${SEOContent.author}'s Portfolio Website`}</title>
         <meta name="keywords" content={SEOContent.keywords} />
-
+        <meta
+          name="google-site-verification"
+          content="jDuXygcOqh5vnSvuFJSzJC01b6geuUSqpmO59_ZpL48"
+        />
         <meta
           property="og:title"
           content={`${SEOContent.author}'s Portfolio`}

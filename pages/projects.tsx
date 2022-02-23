@@ -1,25 +1,30 @@
 import React from "react";
+import Head from "next/Head";
 import WideContentFrame from "../components/WideContentFrame";
 import Header from "../components/Header";
 import Media from "../components/Media";
-import BottomSpacer from "../components/BottomSpacer";
 import ProjectsData from "../page_data/projects.json";
+import SEOContent from "../page_data/seo.json";
 
 function Projects() {
   return (
     <>
+      <Head>
+        <title>{SEOContent.project_page_title}</title>
+        <meta name="description" content={SEOContent.project_page_desc} />
+      </Head>
       <WideContentFrame extraStyle="bg-light">
-        <>
+        <section>
           <Header header={"My Projects 🔩"} textColor="text-dark" />
           {ProjectsData.projects &&
             ProjectsData.projects.map((exp) => {
               return (
-                <div id={exp.title} key={exp.title}>
+                <article id={exp.title} key={exp.title}>
                   <Media exp={exp} />
-                </div>
+                </article>
               );
             })}
-        </>
+        </section>
       </WideContentFrame>
     </>
   );

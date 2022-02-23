@@ -10,9 +10,10 @@ type AppProps = {
   caption: string;
   width: string;
   height: string;
+  alt_text: string;
 };
 
-function Profile({ image, caption, width, height }: AppProps) {
+function Profile({ image, caption, width, height, alt_text }: AppProps) {
   const [swing, setSwing] = useState(false);
   return (
     <div className="overflow-hidden">
@@ -24,6 +25,7 @@ function Profile({ image, caption, width, height }: AppProps) {
                 <Image
                   className="rounded-full"
                   src={image}
+                  alt={alt_text}
                   width={width}
                   height={height}
                 />

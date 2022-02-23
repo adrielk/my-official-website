@@ -69,7 +69,7 @@ function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInitial, setIsInitial] = useState(true);
   return (
-    <>
+    <nav>
       <div className="fixed w-full z-20 bg-light">
         <div className="hidden m-auto w-full sm:block sm:w-normal">
           <TopBar socials={Socials()}>
@@ -154,7 +154,7 @@ function Navigation() {
           </div>
         )}
       </div>
-    </>
+    </nav>
   );
 }
 

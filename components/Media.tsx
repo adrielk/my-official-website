@@ -16,7 +16,7 @@ function Media({ exp }: { exp: Experience }) {
   return (
     <div className="my-5 border-b px-2">
       <Fade up>
-        <div className="text-xl font-medium">
+        <h2 className="text-xl font-medium">
           {exp.title}
           {exp.role && (
             <>
@@ -24,7 +24,7 @@ function Media({ exp }: { exp: Experience }) {
               - <span className="italic">{exp.role} </span>
             </>
           )}
-        </div>
+        </h2>
         <small className="block text-gray-600 italic">{exp.blurb}</small>
 
         <div className="my-5">
@@ -33,6 +33,7 @@ function Media({ exp }: { exp: Experience }) {
               <Image
                 className="rounded"
                 src={require(`/public/images/${exp.img}`)}
+                alt={exp.img_alt}
                 layout="intrinsic"
               />
             </div>
