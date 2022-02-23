@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Profile from "../components/Profile";
 import ProfilePic from "/public/images/imcool.jpg";
 import HomeData from "../page_data/home.json";
@@ -8,7 +7,6 @@ import ProjectsData from "../page_data/projects.json";
 import WideContentFrame from "../components/WideContentFrame";
 import Header from "../components/Header";
 import Preview from "../components/Preview";
-import SEOContent from "../page_data/seo.json";
 /*
 TO DO: Make fully responsive and mobile friendly
 - Add sliding animation between pages
@@ -21,10 +19,6 @@ function SubHeader({ text }: { text: string }) {
 function Home() {
   return (
     <>
-      <Head>
-        <title>{SEOContent.home_page_title}</title>
-        <meta name="description" content={SEOContent.home_page_desc} />
-      </Head>
       <WideContentFrame extraStyle="bg-dark">
         <>
           <div className="py-7">
