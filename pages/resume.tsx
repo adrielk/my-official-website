@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/Head";
+import Head from "next/head";
 import ResumeData from "../page_data/resume.json";
 import SEOContent from "../page_data/seo.json";
 

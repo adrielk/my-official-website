@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/Head";
+import Head from "next/head";
 import Profile from "../components/Profile";
 import ProfilePic from "/public/images/imcool.jpg";
 import HomeData from "../page_data/home.json";
