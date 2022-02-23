@@ -1,5 +1,12 @@
 # Technical Project Portfolio Website Template
 
+This is a simple website to showcase your portfolio of technical projects. It's designed to be easy-to-use and requires no knowledge of web development to modify for your own purposes. All you need is to supply your own information about your projects and work experiences! This template is SEO friendly, mobile friendly, and accessible.
+
+**Lighthouse Report:**
+
+![image](https://user-images.githubusercontent.com/59209071/155265536-cb319ba7-b326-4270-915e-4446eb3e7462.png)
+
+
 ## Getting Started:
 
 1. Clone the repository with the following command:
@@ -49,6 +56,7 @@ A work experience with all its fields looks like this:
       "role": "Your role",
       "blurb": "A short description of your work",
       "img": "Filename of image of your work",
+      "img_alt": "Description of your image",
       "thumbnail": "Filename of thumbnail image of your work",
       "detailed": "A description of your work experience",
       "technologies": [
@@ -60,9 +68,9 @@ A work experience with all its fields looks like this:
     }
 ```
 
-The fields are `title`, `role`, `blurb`,`img`, `thumbnail`, `detailed`, `technologies`, `link`.
+The fields are `title`, `role`, `blurb`,`img`,`img_alt`, `thumbnail`, `detailed`, `technologies`, `link`.
 
-You can add as many of these work experiences as you want to the "work" array.
+You can add as many of these work experiences as you want to the "work" array. The `img_alt` field is required for accessibility and SEO.
 
 ### Adding Projects
 
@@ -78,9 +86,9 @@ The `project.json` contains a field called "projects" which is an array in which
 }
 ```
 
-A project has the exact same structure as a work experience with all the same fields: `title`, `role`, `blurb`,`img`, `thumbnail`, `detailed`, `technologies`, `link`.
+A project has the exact same structure as a work experience with all the same fields: `title`, `role`, `blurb`,`img`,`img_alt`,`thumbnail`, `detailed`, `technologies`, `link`.
 
-However, I typically omit the `role` field since it's not very relevant to personal projects.
+However, I typically omit the `role` field since it's not very relevant to personal projects. The `img_alt` field is required for accessibility and SEO.
 
 ### Modifying your bio
 
@@ -91,9 +99,11 @@ Your short bio that is displayed on the home page is contained in `page_data/hom
   "bio": "Description about yourself",
   "title": "Your title or current role",
   "name": "Your name",
-  "img": "Filename of image of yourself"
+  "img": "Filename of image of yourself",
+  "img_alt": "Description of image"
 }
 ```
+Again, the `img_alt` field is required for accessibility and SEO.
 
 ### Adding your resume
 
@@ -114,6 +124,7 @@ You can add your social media links in `page_data/social_links.json`
 ### Adding Metadata
 
 Metadata is important for search engine optimization (SEO) and providing an aesthetic preview of your site on social media sites such as LinkedIn, Twitter, or Facebook.
+The fields relevant to social media previews are `image`, `url`, and `desc`. The other field are important for SEO.
 
 You can modify metadata in `page_data/seo.json`:
 
@@ -123,8 +134,15 @@ You can modify metadata in `page_data/seo.json`:
   "url": "URL of your website",
   "desc": "Short description of the contents of your site",
   "keywords": "Comma, separated, key, words",
-  "thumbnail_url": "URL of thumbnail image. You can upload your images on https://imgbb.com/"
+  "thumbnail_url": "URL of thumbnail image. You can upload your images on https://imgbb.com/",
+  "project_page_title": "Title of project page",
+  "project_page_desc": "Description of your project page",
+  "work_page_title": "Title of work page",
+  "work_page_desc": "Description of your work page",
+  "resume_page_title": "Title of resume page",
+  "resume_page_desc": "Description of your resume page"
 }
+
 ```
 
 
