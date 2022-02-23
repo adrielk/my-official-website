@@ -52,6 +52,7 @@ function Media({ exp }: { exp: Experience }) {
               <Image
                 className={"px-2"}
                 src={OpenIcon}
+                alt="open icon"
                 layout="fixed"
                 width="20"
                 height="20"

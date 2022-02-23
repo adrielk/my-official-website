@@ -27,7 +27,13 @@ function LinkedInSocial({
 }) {
   return (
     <button onClick={onClick}>
-      <Image className="rounded" src={LinkedInIcon} height="30" width="30" />
+      <Image
+        className="rounded"
+        src={LinkedInIcon}
+        alt="linkedin icon"
+        height="30"
+        width="30"
+      />
     </button>
   );
 }
@@ -38,7 +44,13 @@ function GithubSocial({
 }) {
   return (
     <button onClick={onClick}>
-      <Image className="rounded" src={GitHubIcon} height="30" width="30" />
+      <Image
+        className="rounded"
+        src={GitHubIcon}
+        alt="github icon"
+        height="30"
+        width="30"
+      />
     </button>
   );
 }
@@ -74,21 +86,21 @@ function Navigation() {
         <div className="hidden m-auto w-full sm:block sm:w-normal">
           <TopBar socials={Socials()}>
             <>
-              <Link href="/">
+              <Link href="/" passHref>
                 <h1 className="text-5xl font-medium cursor-pointer pl-2">
                   {HomeData.name}
                 </h1>
               </Link>
-              <Link href="/">
+              <Link href="/" passHref>
                 <button className="font-medium text-xl">Home</button>
               </Link>
-              <Link href="/work">
+              <Link href="/work" passHref>
                 <button className="font-medium text-xl">Work</button>
               </Link>
-              <Link href="/projects">
+              <Link href="/projects" passHref>
                 <button className="font-medium text-xl">Projects</button>
               </Link>
-              <Link href="/resume">
+              <Link href="/resume" passHref>
                 <button className="font-medium text-xl">Resume</button>
               </Link>
             </>
@@ -96,7 +108,7 @@ function Navigation() {
         </div>
 
         <div className="flex items-center p-2 bg-light block m-auto sm:hidden">
-          <Link href="/">
+          <Link href="/" passHref>
             <h1 className="text-2xl font-medium flex-grow cursor-pointer">
               {HomeData.name}
             </h1>
@@ -118,7 +130,7 @@ function Navigation() {
               isOpen ? "menu--open" : "menu--close"
             } flex flex-col absolute overflow-hidden z-10 w-full bg-light border-t py-5 shadow-xl`}
           >
-            <Link href="/">
+            <Link href="/" passHref>
               <button
                 onClick={() => setIsOpen(false)}
                 className="font-medium p-2 text-xl"
@@ -126,7 +138,7 @@ function Navigation() {
                 Home
               </button>
             </Link>
-            <Link href="/work">
+            <Link href="/work" passHref>
               <button
                 onClick={() => setIsOpen(false)}
                 className="font-medium p-2 bg-gray-200 text-xl"
@@ -134,7 +146,7 @@ function Navigation() {
                 Work
               </button>
             </Link>
-            <Link href="/projects">
+            <Link href="/projects" passHref>
               <button
                 onClick={() => setIsOpen(false)}
                 className="font-medium p-2 text-xl"
@@ -142,7 +154,7 @@ function Navigation() {
                 Projects
               </button>
             </Link>
-            <Link href="/resume">
+            <Link href="/resume" passHref>
               <button
                 onClick={() => setIsOpen(false)}
                 className="font-medium p-2 bg-gray-200 text-xl"

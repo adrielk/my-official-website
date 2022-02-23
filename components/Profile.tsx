@@ -42,6 +42,7 @@ function Profile({ image, caption, width, height, alt_text }: AppProps) {
                   <Image
                     className="rounded-full"
                     src={image}
+                    alt={alt_text}
                     width={width}
                     height={height}
                   />

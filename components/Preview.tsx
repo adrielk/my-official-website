@@ -94,6 +94,7 @@ function ViewMore({
       <Image
         className={"px-2s"}
         src={OpenIcon}
+        alt="open icon"
         layout="fixed"
         width="20"
         height="20"
