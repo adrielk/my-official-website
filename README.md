@@ -2,6 +2,8 @@
 
 This is a simple website to showcase your portfolio of technical projects. It's designed to be easy-to-use and requires no knowledge of web development to modify for your own purposes. All you need is to supply your own information about your projects and work experiences! This template is SEO friendly, mobile friendly, and accessible.
 
+Here's a preview: [adriel-portfolio.vercel.app](adriel-portfolio.vercel.app/) 
+
 **Lighthouse Report:**
 
 ![image](https://user-images.githubusercontent.com/59209071/155265536-cb319ba7-b326-4270-915e-4446eb3e7462.png)
