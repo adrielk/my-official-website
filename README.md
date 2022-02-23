@@ -156,7 +156,7 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 
 ## Making your website searchable on Google
 
-Once you've deployed your website, you can make it appear in Google search results using the [URL Inspection Tool](https://support.google.com/webmasters/answer/9012289?hl=en)
+Once you've deployed your website, you can make it appear in Google search results using the [URL Inspection Tool](https://support.google.com/webmasters/answer/9012289?hl=en).
 Using this tool, you can [request indexing](https://support.google.com/webmasters/answer/9012289?hl=en#request_indexing) of your website URL. 
 
 Note that you will need to change a small bit of code to verify your ownership of your website domain. If you haven't set up Goolge Search Console, follow these instructions first: [How to Set up Google Search Console](https://seranking.com/blog/how-to-set-up-google-search-console/).
