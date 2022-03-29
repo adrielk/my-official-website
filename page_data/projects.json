@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "title": "EcoDash",
+      "role": null,
+      "blurb": "HooHacks 2022 Hackathon 1st Place Winner for Best Sustainability Hack",
+      "img": "ecodash.png",
+      "img_alt": "EcoDash landing page",
+      "detailed": "EcoDash is a platform for gamifying the reduction of energy usage on university grounds. Every year, first-year dorms at UVA compete to use the least amount of energy. However, there was no way to view real-time progress as the competition progressed. EcoDash provides a real-time leaderboard of buildings racing to reduce their energy usage using data from UVA's facilities API. The platform also includes charts to visualize energy usage per building and suggestions on how to reduce energy use. Using the history slider, changes in the leaderboard can be viewed over time. Using the Twilio API, subscribers can get updates on key events during the competition. As part of a team of 3, I primarily developed the front-end components including the leaderboard, history slider, and navigation.",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Twilio"
+      ],
+      "link": "https://devpost.com/software/ecodash"
+    },
+    {
       "title": "Personal Website",
       "role": null,
       "blurb": "What you're looking at now!",
